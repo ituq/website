@@ -1,0 +1,113 @@
+body{
+    display: flex;
+    flex-direction: column;
+    font-family: sans-serif;
+}
+.heading{
+    display: flex;
+    justify-content:center;
+    margin:0px 16px;
+    z-index: 2;
+    
+}
+.background{
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    overflow: hidden;
+    z-index: -1;
+}
+img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+}
+
+h1{
+    
+    margin-left: calc((100% - 800px- 247px ) / 2);
+    margin-right: calc((100% - 800px + 247px) / 2);
+    white-space: nowrap;
+    color: white;
+
+}
+body, html, canvas {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+  }
+ul{
+    display:flex;
+    justify-self: flex-start;
+    justify-content: space-evenly;
+    list-style-type: none;
+    align-items: stretch;
+    padding:0px; 
+}
+li:hover{
+    background-color: rgba(211, 211, 211, 0);
+}
+li{
+    backdrop-filter: blur(5px) brightness(1.3) contrast(.9) saturate(1);
+    display: flex;
+    align-items: center;
+    background-color: rgba(211, 211, 211, 0.552);
+    
+}
+a{
+    text-decoration: none;
+    color: black;
+    padding: 5px 20px;
+}
+#photo{
+    border: solid black 1px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    box-shadow: 2px 0 0px;
+}
+#code{
+    border: solid black 1px;
+    border-left: 0px;
+    box-shadow: 2px 0 0px;
+}
+#contact{
+    border: solid black 1px;
+    border-left: 0px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+#leftTopButton{
+    border:solid black 1px;
+    align-self: center;
+    border-radius: 10px;
+}
+.visualGrid{
+    position:fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    height:100%;
+    width: 100%;
+    padding-top: 13px;
+    background-image: radial-gradient(circle at 18px 16px,#ffffff 1px,rgba(0,0,0,0) 0px);
+    background-size: 50px 50px;
+}
+.content{
+    height:2000px;
+    width: 100px;
+    
+}
+.nav{
+    align-self: center;
+    margin-right: auto;
+    
+}
+.leftTopButton{
+    margin-left:auto
+}
