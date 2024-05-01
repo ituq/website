@@ -2,10 +2,11 @@ body{
     display: flex;
     flex-direction: column;
     font-family: sans-serif;
+    justify-content: space-between;
 }
 .heading{
     display: flex;
-    justify-content:center;
+    justify-content:space-between;
     margin:0px 16px;
     z-index: 2;
 
@@ -30,9 +31,6 @@ img{
 }
 
 h1{
-
-    margin-left: calc((100% - 800px- 247px ) / 2);
-    margin-right: calc((100% - 800px + 247px) / 2);
     white-space: nowrap;
     color: white;
 
@@ -51,7 +49,7 @@ ul{
     align-items: stretch;
     padding:0px;
 }
-li:hover{
+.nav ul li:hover{
     background-color: rgba(211, 211, 211, 0);
 }
 li{
@@ -96,7 +94,6 @@ a{
 }
 .nav{
     align-self: center;
-    margin-right: auto;
 
 }
 .leftTopButton{
@@ -121,4 +118,89 @@ a{
     grid-template-columns: repeat(auto-fill, minmax(50px, 1fr)); /* Adapts the number of columns based on the screen width */
     grid-auto-rows: 50px; /* Height of each row */
     z-index: 1;
+}
+.arrow{
+    height: 52px;
+}
+/* Portrait styling */
+div.menuSmall{
+    display: none;
+}
+@media (max-width: 768px) {
+    /*center heading*/
+    .heading{
+        justify-content: center;
+    }
+    /* Hide large screen menu on small screens */
+    .nav{
+        display: none;
+    }
+    li{
+        padding: 10px 20px;
+    }
+    div.menuSmall{
+        display: block;
+    }
+
+    .menu-small>ul{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        margin: 0px;
+
+    }
+    /* Show small screen menu on small screens */
+    .menu-small {
+        margin: 0px 0px 0px 0px;
+    }
+    ul.menuSmall{
+        margin: 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+    div.menuSmall{
+        margin: 40px 20px;
+    }
+    nav.menuSmall.active{
+        display: block;
+    }
+    nav.menuSmall{
+        display: none;
+    }
+    li.active#menuSmall{
+        border-top-right-radius: 0px;
+        border-top-left-radius: 0px;
+    }
+    ul{
+        cursor: pointer;
+    }
+    #menuSmall{
+        border-radius: 10px;
+        border: solid black 1px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    #contactSmall{
+        border: solid black 1px;
+        border-bottom: 0px;
+        box-shadow: 0px 2px 0px;
+    }
+    #codeSmall{
+        border: solid black 1px;
+        border-bottom: 0px;
+        box-shadow: 0px 2px 0px;
+    }
+    #fotoSmall{
+        border: solid black 1px;
+        border-bottom: 0px;
+        border-top-right-radius: 10px;
+        border-top-left-radius: 10px;
+        box-shadow: 0px 2px 0px;
+    }
+    #menu-icon{
+        height: 20px;
+    }
+
 }

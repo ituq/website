@@ -61,7 +61,7 @@ function updateSvgAnimations() {
         // Randomly update target transformations periodically or when close to the target
         if (Math.abs(scaleDiff) < 0.05 || Math.abs(rotationDiff) < 5) { // Adjust thresholds as needed
             path.currentTargetScale = 0.5 + Math.random() * 0.5;
-            svg.currentTargetRotation = gaussianRandom(0.125,0.1) * 360;
+            svg.currentTargetRotation = gaussianRandom(0.125,0.05) * 360;
         }
     });
 
