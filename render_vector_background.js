@@ -1,5 +1,7 @@
 let svgs = [];
-const direction =window.innerWidth<=768?0.25:0.875;
+function getDirection(){
+    return window.innerWidth<=768?0.25:0.875;
+}
 document.addEventListener("DOMContentLoaded", function() {
     function populateGrid() {
         const container = document.getElementById('container');
@@ -15,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
             // Create main svg element
             const svgElem = document.createElementNS(svgNS, 'svg');
-            svgElem.currentRotation =gaussianRandom(direction,0.05)*360;
+            svgElem.currentRotation =gaussianRandom(getDirection(),0.05)*360;
             svgElem.setAttribute('class', 'arrow');
             svgElem.setAttribute('viewBox', '0 0 100 100');
             svgElem.setAttribute('id', 'svgRotate');
@@ -26,18 +28,20 @@ document.addEventListener("DOMContentLoaded", function() {
             // Create wrapper div
 
             container.appendChild(svgElem);
+            svgs.forEach(svg => {
+                const path = svg.querySelector('path'); // Assuming the path is the element to scale
+                svg.currentTargetRotation = gaussianRandom(getDirection(),0.05) * 360;
+                path.currentScale = 1;
+                path.currentTargetScale = 0.1 + Math.random() * 0.5; // Ensures scale is between 0.5 and 1.0
+            });
         }
+
     }
 
     // Populate initially
     populateGrid();
 
-    svgs.forEach(svg => {
-        const path = svg.querySelector('path'); // Assuming the path is the element to scale
-        svg.currentTargetRotation = gaussianRandom(direction,0.05) * 360;
-        path.currentScale = 1;
-        path.currentTargetScale = 0.1 + Math.random() * 0.5; // Ensures scale is between 0.5 and 1.0
-    });
+
 
     // Repopulate on resize to maintain density
     window.addEventListener('resize', populateGrid);
@@ -64,7 +68,7 @@ function updateSvgAnimations() {
         // Randomly update target transformations periodically or when close to the target
         if (Math.abs(scaleDiff) < 0.05 || Math.abs(rotationDiff) < 5) { // Adjust thresholds as needed
             path.currentTargetScale = 0.5 + Math.random() * 0.5;
-            svg.currentTargetRotation = gaussianRandom(direction,0.05) * 360;
+            svg.currentTargetRotation = gaussianRandom(getDirection(),0.05) * 360;
         }
     });
 

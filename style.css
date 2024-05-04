@@ -205,3 +205,13 @@ div.menuSmall{
     }
 
 }
+/* Photo Styling */
+
+#one{
+    height: 150px;
+}
+#one>img{
+    height: 150px;
+    width: auto;
+    z-index: 1;
+}
