@@ -215,7 +215,7 @@ div.menuSmall{
 }
 /* Photo Styling */
 .photos{
-    margin-top: calc(50vh - min(25vw,25vh));
+    margin-top: calc(50vh - min(33vw,33vh));
 
 }
 div#one{
@@ -235,7 +235,7 @@ img#one{
     width: auto;
     z-index: 1;
     margin: auto;
-    height: min(50vw, 50vh);
+    height: min(66vw, 66vh);
 }
 div#two{
     position: relative;
