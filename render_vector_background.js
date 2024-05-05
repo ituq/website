@@ -5,9 +5,10 @@ function getDirection(){
 document.addEventListener("DOMContentLoaded", function() {
     function populateGrid() {
         const container = document.getElementById('container');
-        const nColumns = Math.floor(container.offsetWidth / 40); // Each SVG will occupy 40px width space
+        const nColumns = Math.floor(container.offsetWidth / 40)+2; // Each SVG will occupy 40px width space
         const nRows = Math.floor(container.offsetHeight / 40); // Each SVG will occupy 40px height space
         const totalSVGs = nColumns * nRows;
+        container.style.gridTemplateColumns = `repeat(${nColumns}, minmax(50px, 1fr))`;
 
         container.innerHTML = ''; // Clear existing SVGs
         svgs=[];
@@ -52,7 +53,7 @@ function updateSvgAnimations() {
         const path = svg.querySelector('path');
 
         // Easing factor determines the speed of interpolation
-        const easingFactor = 0.003; // Increased for more noticeable changes
+        const easingFactor = 0.005; // Increased for more noticeable changes
 
         // Calculate the difference between current and target transformations
         const scaleDiff = path.currentTargetScale - path.currentScale;

@@ -7,10 +7,10 @@ body{
 .heading{
     display: flex;
     justify-content:space-between;
-    margin:0px 16px;
     z-index: 2;
-
-}
+    padding: 0px 16px;
+    position: fixed;
+    width: calc(100% - 32px);}
 .background{
     position: fixed;
     top: 0;
@@ -155,13 +155,21 @@ div.menuSmall{
         margin: 0px 0px 0px 0px;
     }
     ul.menuSmall{
-        margin: 0px;
+        margin: 0px 40px ;
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
+
+
     }
     div.menuSmall{
         margin: 40px 20px;
+        position: fixed;
+        width: calc(100% - 40px);
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 20;
     }
     nav.menuSmall.active{
         display: block;
@@ -206,12 +214,77 @@ div.menuSmall{
 
 }
 /* Photo Styling */
+.photos{
+    margin-top: calc(50vh - min(25vw,25vh));
 
-#one{
-    height: 150px;
 }
-#one>img{
-    height: 150px;
+div#one{
+    display: flex;
+    justify-content: center;
+}
+.photoBox>img{
+    width: auto;
+    height: 500px;
+    position: relative;
+    z-index: 1;
+}
+.photos>div{
+    position: relative;
+}
+img#one{
     width: auto;
     z-index: 1;
+    margin: auto;
+    height: min(50vw, 50vh);
+}
+div#two{
+    position: relative;
+    height: auto;
+    margin-top: calc(50vh - 224px);
+    margin-left: 5vw;
+    margin-right: 5vw;
+}
+img#two{
+    width: auto;
+    z-index: 1;
+    height: 35vw;
+    margin-left: 3vw;
+
+}
+img#three{
+    width: auto;
+    height: 40vw;
+    z-index: 1;
+    margin-left: 5vw;
+    top: 56px;
+}
+div#three{
+    display: flex;
+    justify-content: center;
+    margin: calc(10vh + 100px) 10vh 0px 10vh;
+    height: calc(100px + 40vw);
+}
+img#four{
+    height: 43vw;
+}
+div#five{
+    height: 40vw;
+    margin-left: 5vw;
+    margin-right: 5vw;
+}
+img#five{
+    margin-left: 3vw;
+    height: 30vw;
+}
+img#six{
+    height: 40vw;
+    margin-left: 3vw;
+}
+div#seven{
+    display: flex;
+    justify-content: center;
+    margin-top: 7vh;
+}
+img#seven{
+    height: 50vw;
 }
