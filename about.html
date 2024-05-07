@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vincent Franz</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <style>
+        h1{
+            color: black;
+        }
+        body{
+            display: block;
+            flex-direction: column;
+        }
+        .about{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-left: 10vw;
+            padding-right: 10vw;
+            height: 100vh;
+        }
+        #foto{
+            width: min(50vw, 50vh);
+            height: auto;
+        }
+        img{
+            position: relative;
+        }
+        p{
+            margin-left: 5vw;
+        }
+        @media (max-width: 800px){
+            .about{
+                flex-direction: column;
+                padding-left: 10vw;
+                padding-right: 10vw;
+
+            }
+            p{
+                margin-left: 0vw;
+            }
+
+        }
+    </style>
+
+</head>
+<body>
+    <div class="heading">
+        <h1>VINCENT FRANZ</h1>
+        <div class="nav">
+            <ul>
+                <li id="photo">
+                    <a href="./#" >OVERVIEW</a>
+                </li>
+                <li id="code">
+                    <a href="./#" >BY YEAR</a>
+                </li>
+                <li id="contact">
+                    <a href="./#" >ABOUT</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="about">
+        <img id="foto" src="me.jpeg" alt="">
+        <div id="bio">
+            <p>Vincent Franz is computer science student based in Zurich, Switzerland. He does photography on the side.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa minima possimus illum exercitationem esse veritatis qui sunt fuga, iste eius ut provident consectetur quam ab tempora accusantium officia id nostrum?</p>
+            <p>vincentluisfranz@gmail.com</p>
+
+        </div>
+    </div>
+
+
+
+
+    <div class="menuSmall">
+        <nav id="portraitNav" class="menuSmall">
+            <ul class="menuSmall">
+                <li id="fotoSmall" href="./#">PHOTOS<a href=""></a></li>
+                <li id="codeSmall" href="./#">CODE<a href=""></a></li>
+                <li id="contactSmall" href="./#">CONTACT<a href=""></a></li>
+            </ul>
+        </nav>
+        <ul class="menuSmall">
+            <li id="menuSmall">
+                MENU
+                <svg version="1.1" id="menu-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                     viewBox="0 0 40 40" style="enable-background:new 0 0 40 40;" xml:space="preserve">
+                    <style type="text/css">
+                        .st0{fill:#FFFFFF;stroke:#000000;stroke-width: 2px;stroke-miterlimit:10;}
+                    </style>
+                    <line class="st0" x1="6" y1="8.5" x2="36" y2="8.5"/>
+                    <line class="st0" x1="6" y1="19.5" x2="36" y2="19.5"/>
+                    <line class="st0" x1="6" y1="30.5" x2="36" y2="30.5"/>
+                </svg>
+            </li>
+        </ul>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
