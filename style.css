@@ -210,6 +210,14 @@ div.menuSmall{
     #menu-icon{
         height: 20px;
     }
+    a{
+        padding: 10px 20px;
+        width: 100%;
+        text-align: left;
+    }
+    li{
+        padding: 0px;
+    }
 
 }
 /* Photo Styling */
