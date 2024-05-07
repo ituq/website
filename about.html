@@ -7,12 +7,14 @@
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
     <style>
+
         h1{
             color: black;
         }
         body{
             display: block;
             flex-direction: column;
+            background-image: ;
         }
         .about{
             display: flex;
@@ -25,6 +27,7 @@
         #foto{
             width: min(50vw, 50vh);
             height: auto;
+            z-index: 5;
         }
         img{
             position: relative;
@@ -42,6 +45,9 @@
             p{
                 margin-left: 0vw;
             }
+            #background{
+                z-index: -1;
+            }
 
         }
     </style>
@@ -49,7 +55,7 @@
 </head>
 <body>
     <div class="heading">
-        <h1>VINCENT FRANZ</h1>
+        <a id="heading" href="./index.html"><h1>VINCENT FRANZ</h1></a>
         <div class="nav">
             <ul>
                 <li id="photo">
@@ -67,15 +73,11 @@
     <div class="about">
         <img id="foto" src="me.jpeg" alt="">
         <div id="bio">
-            <p>Vincent Franz is computer science student based in Zurich, Switzerland. He does photography on the side.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa minima possimus illum exercitationem esse veritatis qui sunt fuga, iste eius ut provident consectetur quam ab tempora accusantium officia id nostrum?</p>
-            <p>vincentluisfranz@gmail.com</p>
-
+            <p>Hey, my name is Vincent and I'm a computer science student based in Zurich, Switzerland. In my free time I like to take the photos you can see on this site.</p>
+            <p>I started off taking a lot of pictures of landscapes before moving on to more cityscapes. Nowadays my style is more in the documentary/street domain of photography. </p>
+            <p>Contact me: vincentluisfranz@gmail.com</p>
         </div>
     </div>
-
-
-
 
     <div class="menuSmall">
         <nav id="portraitNav" class="menuSmall">
