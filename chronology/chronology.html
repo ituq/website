@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Photos by Year</title>
+        <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
+        <link rel="stylesheet" href="../style.css">
+        <style>
+            h1{
+                color: black;
+            }
+            #header{
+
+            }
+
+
+            body{
+                margin: 0;
+                padding: 0;
+                font-family:sans-serif;
+                background-color: #f0f0f0;
+            }
+            #timeline{
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: stretch;
+            }
+            .year{
+                padding-left: 1vw;
+                height: 89.88px;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                background-size: cover;
+                background-position: bottom;
+                cursor: pointer;
+            }
+            h2{
+                color: white;
+            }
+            .grid{
+                position: fixed;
+                width: 100vw;
+                height: 100vh;
+                background-image: radial-gradient(circle at 1px 1px,#000 1px,transparent 0px);
+                background-size: 25px 25px;
+                z-index: -2;
+            }
+            #eighteen{background-image: url(2018.jpg);}
+            #nineteen{background-image: url(2019.jpg);}
+            #twenty{background-image: url(2020.jpg); background-position: center;}
+            #twentyone{background-image: url(2021.jpg); background-position: center;}
+            #twentytwo{background-image: url(2022.jpg); background-position: center;}
+            #twentythree{background-image: url(2023.jpg); background-position: center;}
+            @media (max-width: 768px) {
+                .year{
+                    height: 79.88px;
+                }
+
+            }
+        </style>
+    </head>
+    <body>
+        <div class="grid"></div>
+        <div class="heading">
+            <a id="heading" href="./index.html"><h1>VINCENT FRANZ</h1></a>
+            <div class="nav">
+                <ul>
+                    <li id="photo">
+                        <a href="../index.html" >OVERVIEW</a>
+                    </li>
+                    <li id="code">
+                        <a href="./chronology.html" >BY YEAR</a>
+                    </li>
+                    <li id="contact">
+                        <a href="../about/about.html" >ABOUT</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div id="timeline">
+            <div class="year" id="header"><h2></h2></div>
+            <div class="year" id="eighteen"><h2>2018</h2></div>
+            <div class="year" id="nineteen"><h2>2019</h2></div>
+            <div class="year" id="twenty"><h2>2020</h2></div>
+            <div class="year" id="twentyone"><h2>2021</h2></div>
+            <div class="year" id="twentytwo"><h2>2022</h2></div>
+            <div class="year" id="twentythree"><h2>2023</h2></div>
+        </div>
+        <div class="menuSmall">
+            <nav id="portraitNav" class="menuSmall">
+                <ul class="menuSmall">
+                    <li id="fotoSmall" ><a href="../index.html">OVERVIEW</a></li>
+                    <li id="codeSmall" ><a href="./chronology.html">BY YEAR</a></li>
+                    <li id="contactSmall" ><a href="../about/about.html">ABOUT</a></li>
+                </ul>
+            </nav>
+            <ul class="menuSmall">
+                <li id="menuSmall" style="padding:10px 20px;">
+                    MENU
+                    <svg version="1.1" id="menu-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                         viewBox="0 0 40 40" style="enable-background:new 0 0 40 40;" xml:space="preserve">
+                        <style type="text/css">
+                            .st0{fill:#FFFFFF;stroke:#000000;stroke-width: 2px;stroke-miterlimit:10;}
+                        </style>
+                        <line class="st0" x1="6" y1="8.5" x2="36" y2="8.5"/>
+                        <line class="st0" x1="6" y1="19.5" x2="36" y2="19.5"/>
+                        <line class="st0" x1="6" y1="30.5" x2="36" y2="30.5"/>
+                    </svg>
+                </li>
+            </ul>
+        </div>
+        <script src="../script.js"></script>
+    </body>
+</html>

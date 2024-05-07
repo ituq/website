@@ -3,13 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vincent Franz</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <title>About me</title>
+    <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
     <style>
 
         h1{
-            color: black;
+            color: white;
         }
         body{
             display: block;
@@ -28,12 +29,12 @@
             width: min(50vw, 50vh);
             height: auto;
             z-index: 5;
-        }
-        img{
             position: relative;
         }
+
         p{
             margin-left: 5vw;
+            color: black;
         }
         @media (max-width: 800px){
             .about{
@@ -45,24 +46,25 @@
             p{
                 margin-left: 0vw;
             }
-            #background{
-                z-index: -1;
-            }
 
         }
     </style>
 
 </head>
 <body>
+    <div class="background">
+        <div id="container"></div>
+        <img src="../background.jpg">
+    </div>
     <div class="heading">
         <a id="heading" href="./index.html"><h1>VINCENT FRANZ</h1></a>
         <div class="nav">
             <ul>
                 <li id="photo">
-                    <a href="./index.html" >OVERVIEW</a>
+                    <a href="../index.html" >OVERVIEW</a>
                 </li>
                 <li id="code">
-                    <a href="./#" >BY YEAR</a>
+                    <a href="../chronology/chronology.html" >BY YEAR</a>
                 </li>
                 <li id="contact">
                     <a href="./about.html" >ABOUT</a>
@@ -82,8 +84,8 @@
     <div class="menuSmall">
         <nav id="portraitNav" class="menuSmall">
             <ul class="menuSmall">
-                <li id="fotoSmall" ><a href="./index.html">OVERVIEW</a></li>
-                <li id="codeSmall" ><a href="">BY YEAR</a></li>
+                <li id="fotoSmall" ><a href="../index.html">OVERVIEW</a></li>
+                <li id="codeSmall" ><a href="../chronology/chronology.html">BY YEAR</a></li>
                 <li id="contactSmall" ><a href="./about.html">ABOUT</a></li>
             </ul>
         </nav>
@@ -102,6 +104,7 @@
             </li>
         </ul>
     </div>
-    <script src="script.js"></script>
+    <script src="../render_vector_background.js"></script>
+    <script src="../script.js"></script>
 </body>
 </html>
