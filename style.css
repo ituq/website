@@ -4,6 +4,7 @@ body{
     font-family: sans-serif;
     justify-content: space-between;
 }
+
 .heading{
     display: flex;
     justify-content:space-between;
@@ -240,6 +241,9 @@ div#footer{
 div.menuSmall{
     display: none;
 }
+.menu-icon{
+    height: 20px;
+}
 @media (max-width: 768px) {
     .heading{
         padding: 0px;
@@ -378,6 +382,7 @@ div.menuSmall{
     #menu-icon{
         height: 20px;
     }
+
     a{
         padding: 10px 20px;
         width: 100%;
@@ -387,4 +392,19 @@ div.menuSmall{
         padding: 0px;
     }
 
+}
+.hidden{
+    display: none;
+
+}
+div.hidden{
+    display: none;
+    height: 0px;
+}
+#description.hidden{
+    display: none;
+    height: 0px;
+}
+.black{
+    background-color: black;
 }
