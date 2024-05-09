@@ -1,0 +1,4 @@
+# BEGIN Basic .htaccess
+Options -Indexes
+DirectoryIndex index.php index.html index.htm
+# END Basic .htaccess
